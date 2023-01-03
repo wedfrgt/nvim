@@ -86,3 +86,5 @@ source ~/.config/nvim/config.vim
 " colorscheme dracula		" dracula主题
 colorscheme cosme
 
+" 快速打开lazygit
+noremap <C-g> :tabe<CR>:term lazygit<CR>a
