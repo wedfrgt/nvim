@@ -81,7 +81,7 @@ map R :source $MYVIMRC<CR>
 source ~/.config/nvim/plugins.vim
 
 " 插件配置
-source ~/.config/nvim/plugins-config.vim
+source ~/.config/nvim/config.vim
 
 " colorscheme dracula		" dracula主题
 colorscheme cosme
