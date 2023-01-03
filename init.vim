@@ -29,6 +29,16 @@ noremap <LEADER><CR> :nohlsearch<CR>
 " 仅在wsl需要此设置，因为默认wsl的<C-v>是粘贴windows系统的剪切板上的内容
 noremap <C-v> <C-q> 
 
+" bn => 下一个buffer    bp => 前一个buffer
+" bq => 退出当前buffer  qq => 退出并保存
+noremap bn :bn<CR>
+noremap bp :bp<CR>
+noremap bq :bw<CR>
+noremap qq :wq<CR>
+
+" W 保存
+noremap W :w<CR>
+
 " 光标移动
 "    ^
 "    i

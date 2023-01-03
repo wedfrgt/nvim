@@ -123,6 +123,7 @@ set foldlevel=99
 " ===== fzf-lua |start| =====
 
 noremap <C-p> :FzfLua files<CR>
+noremap <C-b> :FzfLua buffers<CR>
 lua <<EOF
 require("fzf-lua").setup({
     winopts = { 
@@ -130,7 +131,10 @@ require("fzf-lua").setup({
         width = 0.8,
     },
     files = {
-        prompt = 'Files❯ ', -- example, not required
+        prompt = 'Files❯ ',
+    },
+    buffers = {
+        prompt = 'buffers❯ ',
     },
 })
 EOF
