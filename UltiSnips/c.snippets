@@ -1,0 +1,152 @@
+snippet in "Include"
+#include <stdio.h>
+#include <stdlib.h>
+${0}
+endsnippet
+
+snippet inch "Include from file(xxx.h)"
+#include "$1.h"
+$0
+endsnippet
+
+snippet prf "printf"
+printf("${0}");
+endsnippet
+
+snippet main "main(int argc, char *argv[])"
+int main(int argc, char *argv[])
+{
+	${VISUAL}$0
+	return 0;
+}
+endsnippet
+
+snippet mainn "main(void)"
+int main(void)
+{
+	${VISUAL}$0
+	return 0;
+}
+endsnippet
+
+snippet if "if(...){...}"
+if (${1:true}) {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet ife "if(...){...}else{...}"
+if (${1:true}) {
+	${2:${VISUAL}}
+} else {
+	${0}
+}
+endsnippet
+
+snippet el "else{...}"
+else {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet elif "else if(...){...}"
+else if (${1:true}) {
+	${0:${VISUAL}}	
+}
+endsnippet
+
+snippet switch "switch(...){case ...}"
+switch (${1}) {
+	case ${2}:
+		${3}
+		${4:break;}
+}
+endsnippet
+
+snippet switchd "switch(...){case: ... default: ...}"
+switch (${1}) {
+	case ${2}:
+		${3}
+		${4:break;}
+	default:
+		${5}
+}
+endsnippet
+
+snippet case "case: ..."
+case ${1}:
+	${2}
+	${3:break;}
+endsnippet
+
+snippet ret "return"
+return ${0};
+endsnippet
+
+snippet ex "exit"
+exit($0);
+endsnippet
+
+snippet wh "while(...){...}"
+while (${1}) {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet com "comment"
+/* ${VISUAL} */
+endsnippet
+
+snippet for "for(...;...;...){...}"
+for (${1}) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet def "#define ..."
+#define $0
+endsnippet
+
+snippet fun "function"
+${1:void} ${2:function_name}($3)
+{
+	${VISUAL}$0
+}
+endsnippet
+
+snippet fund "function_define"
+${1:void} ${2:function_name}($3);
+endsnippet
+
+snippet st "struct"
+struct $1 {
+	$0
+};
+endsnippet
+
+snippet td "typedef"
+typedef $1 $2;
+endsnippet
+
+snippet tdst "typedef struct"
+typedef struct {
+	$2
+} $1;
+endsnippet
+
+snippet t "Ternary: `condition ? true : false`"
+$1 ? $2 : $0;
+endsnippet
+
+## Dynamic Allocation
+snippet mlc "p = (xxx *) malloc(xxx);"
+${1:ptr} = (${2:type} *) malloc(${3:sizeof($4)});
+endsnippet
+
+snippet clc "p = (xxx *) calloc(xxx, xxx);"
+${1:ptr} = (${2:type} *) calloc(${3:size}, sizeof($4));
+endsnippet
+
+snippet fre "free(xxx);"
+free(${1:ptr});
+endsnippet
