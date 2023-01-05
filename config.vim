@@ -33,11 +33,8 @@ endfunction
 nmap <silent> <LEADER>, <Plug>(coc-diagnostic-prev)
 nmap <silent> <LEADER>. <Plug>(coc-diagnostic-next)
 
-" 跳转到函数在哪被定义等
+" 跳转到函数定义
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
 
 nnoremap <silent> <LEADER>h :call ShowDocumentation()<CR>
 function! ShowDocumentation()
@@ -58,8 +55,8 @@ noremap <LEADER>r :MarkdownPreview<CR>
 
 " ===== snippets =====
 
-imap <M-k> <Plug>(coc-snippets-expand)
-vmap <M-l> <Plug>(coc-snippets-select)
+" imap <M-k> <Plug>(coc-snippets-expand)
+" vmap <M-l> <Plug>(coc-snippets-select)
 let g:coc_snippet_next = '<m-l>'
 let g:coc_snippet_prev = '<m-j>'
 " imap <M-l> <Plug>(coc-snippets-expand-jump)
@@ -96,7 +93,7 @@ nmap <space>f <Cmd>CocCommand explorer --preset floating<CR>
 let g:vista_fzf_preview = ['right:50%']
 
 noremap \\ :Vista!!<CR>
-noremap \f :Vista finder<CR>
+noremap \f :Vista finder!<CR>
 
 " ===== fzf-lua =====
 

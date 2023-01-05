@@ -35,7 +35,7 @@ noremap <LEADER><CR> :nohlsearch<CR>
 noremap <C-v> <C-q> 
 
 " bn => 下一个buffer    bp => 前一个buffer
-" bq => 退出当前buffer  qq => 退出并保存
+" bq => 退出当前buffer
 noremap bn :bn<CR>
 noremap bp :bp<CR>
 noremap bq :bw<CR>
