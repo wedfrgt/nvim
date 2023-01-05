@@ -101,5 +101,8 @@ source ~/.config/nvim/plugins.vim
 " 插件配置
 source ~/.config/nvim/config.vim
 
+" lua配置
+source ~/.config/nvim/lua_config.lua
+
 " 快速打开lazygit
 noremap <C-g> :tabe<CR>:term lazygit<CR>a

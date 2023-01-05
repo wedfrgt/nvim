@@ -1,6 +1,4 @@
-source ~/.config/nvim/lua_config.lua
-
-" ===== coc.nvim |start| =====
+" ===== coc.nvim =====
 let g:coc_global_extensions = [
   \ 'coc-json', 
   \ 'coc-pyright',
@@ -53,43 +51,31 @@ endfunction
 " <LEADER>e 打开或关闭文件树
 nnoremap <LEADER>e :CocCommand explorer<CR>
 
-" ===== coc.nvim |end| =====
-
-" ===== markdown-preview |start| =====
+" ===== markdown-preview =====
 
 " SPACE + r 浏览Markdown文件
 noremap <LEADER>r :MarkdownPreview<CR> 
 
-" ===== markdown-preview |end| =====
+" ===== snippets =====
 
-" ===== snippets |start| =====
-
-" noremap <m-,> <nop>
-" noremap <m-.> <nop>
 imap <M-k> <Plug>(coc-snippets-expand)
 vmap <M-l> <Plug>(coc-snippets-select)
 let g:coc_snippet_next = '<m-l>'
 let g:coc_snippet_prev = '<m-j>'
 " imap <M-l> <Plug>(coc-snippets-expand-jump)
 
-" ===== snippets |end| =====
-
-" ===== vim-bookmarks |start| =====
+" ===== vim-bookmarks =====
 
 highlight BookmarkSign ctermbg=NONE ctermfg=169
 highlight BookmarkLine ctermbg=NONE ctermfg=169
 let g:bookmark_sign = '♥'
 let g:bookmark_highlight_lines = 1
 
-" ===== vim-bookmarks |end| =====
-
-" ===== rnvimr |start| =====
+" ===== rnvimr =====
 
 noremap <LEADER><LEADER> :RnvimrToggle<CR>
 
-" ===== rnvimr |end| =====
-
-" ===== coc_explorer |start| =====
+" ===== coc_explorer =====
 
 let g:coc_explorer_global_presets = {
 \   '.vim': {
@@ -105,46 +91,24 @@ let g:coc_explorer_global_presets = {
 nmap <space>v <Cmd>CocCommand explorer --preset .vim<CR>
 nmap <space>f <Cmd>CocCommand explorer --preset floating<CR>
 
-" ===== coc_explorer |end| =====
-
-" ===== Vista |start| =====
+" ===== Vista =====
 
 let g:vista_fzf_preview = ['right:50%']
 
 noremap \\ :Vista!!<CR>
 noremap \f :Vista finder<CR>
 
-" ===== Vista |end| =====
-
-" ===== fzf-lua |start| =====
+" ===== fzf-lua =====
 
 noremap <C-p> :FzfLua files<CR>
 noremap <C-b> :FzfLua buffers<CR>
 
-" ===== fzf-lua |end| =====
+" ===== leap =====
 
-" ===== airline |start| =====
-
-let g:airline#extensions#tabline#enabled = 0
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#buffer_idx_mode = 1
-nmap <leader>1 <Plug>AirlineSelectTab1
-nmap <leader>2 <Plug>AirlineSelectTab2
-nmap <leader>3 <Plug>AirlineSelectTab3
-nmap <leader>4 <Plug>AirlineSelectTab4
-nmap <leader>5 <Plug>AirlineSelectTab5
-nmap <leader>6 <Plug>AirlineSelectTab6
-nmap <leader>7 <Plug>AirlineSelectTab7
-nmap <leader>8 <Plug>AirlineSelectTab8
-nmap <leader>9 <Plug>AirlineSelectTab9
-
-" ===== airline |end| =====
-
-" ===== leap |start| =====
 lua require('leap').add_default_mappings()
-" ===== leap |end| =====
 
-" ===== Lualine |start| =====
+" ===== Lualine =====
+
 noremap <silent><LEADER>1 :LualineBuffersJump 1<CR>
 noremap <silent><LEADER>2 :LualineBuffersJump 2<CR>
 noremap <silent><LEADER>3 :LualineBuffersJump 3<CR>
@@ -154,4 +118,11 @@ noremap <silent><LEADER>6 :LualineBuffersJump 6<CR>
 noremap <silent><LEADER>7 :LualineBuffersJump 7<CR>
 noremap <silent><LEADER>8 :LualineBuffersJump 8<CR>
 noremap <silent><LEADER>9 :LualineBuffersJump 9<CR>
-" ===== Lualine |end| =====
+
+" ===== gitgutter =====
+
+let g:gitgutter_map_keys = 0
+noremap <LEADER>gp <Plug>(GitGutterPreviewHunk)
+noremap <LEADER>gs <Plug>(GitGutterStageHunk)
+noremap g[ <Plug>(GitGutterPrevHunk)
+noremap g] <Plug>(GitGutterNextHunk)
