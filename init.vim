@@ -6,6 +6,7 @@ set shiftwidth=4
 set expandtab     " 用space替代tab的输入
 " set noexpandtab " 不用space替代tab的输入
 
+set noshowmode
 set number
 set relativenumber
 set cursorline
@@ -20,6 +21,10 @@ set incsearch
 set ignorecase
 set smartcase
 set scrolloff=10
+set termguicolors
+
+set foldmethod=syntax
+set foldlevel=99
 
 noremap = nzz
 noremap - Nzz
@@ -34,7 +39,6 @@ noremap <C-v> <C-q>
 noremap bn :bn<CR>
 noremap bp :bp<CR>
 noremap bq :bw<CR>
-noremap qq :wq<CR>
 
 " W 保存
 noremap W :w<CR>
@@ -87,14 +91,15 @@ map Q :q<CR>
 " R 刷新vimrc
 map R :source $MYVIMRC<CR>
 
+" colorscheme dracula		" dracula主题
+" colorscheme cosme
+colorscheme onedark
+
 " 插件管理器
 source ~/.config/nvim/plugins.vim
 
 " 插件配置
 source ~/.config/nvim/config.vim
-
-" colorscheme dracula		" dracula主题
-colorscheme cosme
 
 " 快速打开lazygit
 noremap <C-g> :tabe<CR>:term lazygit<CR>a

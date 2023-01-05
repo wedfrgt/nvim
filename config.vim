@@ -1,3 +1,5 @@
+source ~/.config/nvim/lua_config.lua
+
 " ===== coc.nvim |start| =====
 let g:coc_global_extensions = [
   \ 'coc-json', 
@@ -75,6 +77,7 @@ let g:coc_snippet_prev = '<m-j>'
 " ===== vim-bookmarks |start| =====
 
 highlight BookmarkSign ctermbg=NONE ctermfg=169
+highlight BookmarkLine ctermbg=NONE ctermfg=169
 let g:bookmark_sign = '♥'
 let g:bookmark_highlight_lines = 1
 
@@ -113,37 +116,16 @@ noremap \f :Vista finder<CR>
 
 " ===== Vista |end| =====
 
-" ===== vim-fold |start| =====
-
-set foldmethod=syntax
-set foldlevel=99
-
-" ===== vim-fold |end| =====
-
 " ===== fzf-lua |start| =====
 
 noremap <C-p> :FzfLua files<CR>
 noremap <C-b> :FzfLua buffers<CR>
-lua <<EOF
-require("fzf-lua").setup({
-    winopts = { 
-        height = 0.8,
-        width = 0.8,
-    },
-    files = {
-        prompt = 'Files❯ ',
-    },
-    buffers = {
-        prompt = 'buffers❯ ',
-    },
-})
-EOF
 
 " ===== fzf-lua |end| =====
 
 " ===== airline |start| =====
 
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 nmap <leader>1 <Plug>AirlineSelectTab1
@@ -162,3 +144,14 @@ nmap <leader>9 <Plug>AirlineSelectTab9
 lua require('leap').add_default_mappings()
 " ===== leap |end| =====
 
+" ===== Lualine |start| =====
+noremap <silent><LEADER>1 :LualineBuffersJump 1<CR>
+noremap <silent><LEADER>2 :LualineBuffersJump 2<CR>
+noremap <silent><LEADER>3 :LualineBuffersJump 3<CR>
+noremap <silent><LEADER>4 :LualineBuffersJump 4<CR>
+noremap <silent><LEADER>5 :LualineBuffersJump 5<CR>
+noremap <silent><LEADER>6 :LualineBuffersJump 6<CR>
+noremap <silent><LEADER>7 :LualineBuffersJump 7<CR>
+noremap <silent><LEADER>8 :LualineBuffersJump 8<CR>
+noremap <silent><LEADER>9 :LualineBuffersJump 9<CR>
+" ===== Lualine |end| =====

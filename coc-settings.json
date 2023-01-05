@@ -79,6 +79,7 @@
 		"gs": ["wait", "reveal:select"],
 		"r": "toggleHidden"
 	},
+    "explorer.width": 35,
 	"snippets.snipmate.enable": false,
 	"snippets.ultisnips.directories": [
 		"UltiSnips"
