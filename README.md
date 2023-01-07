@@ -43,6 +43,7 @@
 
 ### 首先
 
+- 执行`:PlugInstall`，安装插件
 - 执行`:checkhealth`，检查是否报错，并解决
 
 ### 对于 Vista
