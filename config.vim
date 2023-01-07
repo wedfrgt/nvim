@@ -5,6 +5,7 @@ let g:coc_global_extensions = [
   \ 'coc-highlight',
   \ 'coc-explorer',
   \ 'coc-snippets',
+  \ 'coc-cmake',
   \ 'coc-vimlsp']
 
 set updatetime=100
