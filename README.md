@@ -34,6 +34,8 @@
       - [vista](#vista)
     - [git 操作](#git-操作)
       - [gitgutter](#gitgutter)
+    - [终端操作](#终端操作)
+      - [floaterm](#floaterm)
 
 ## 依赖
 
