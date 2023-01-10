@@ -16,5 +16,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'airblade/vim-gitgutter'                                 " 左侧显示git记录
   Plug 'joshdick/onedark.vim'
   Plug 'nvim-lualine/lualine.nvim'
+  Plug 'Yggdroot/indentLine'
+  Plug 'voldikss/vim-floaterm'
 
 call plug#end()

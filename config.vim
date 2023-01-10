@@ -105,18 +105,6 @@ noremap <C-b> :FzfLua buffers<CR>
 
 lua require('leap').add_default_mappings()
 
-" ===== Lualine =====
-
-noremap <silent><LEADER>1 :LualineBuffersJump 1<CR>
-noremap <silent><LEADER>2 :LualineBuffersJump 2<CR>
-noremap <silent><LEADER>3 :LualineBuffersJump 3<CR>
-noremap <silent><LEADER>4 :LualineBuffersJump 4<CR>
-noremap <silent><LEADER>5 :LualineBuffersJump 5<CR>
-noremap <silent><LEADER>6 :LualineBuffersJump 6<CR>
-noremap <silent><LEADER>7 :LualineBuffersJump 7<CR>
-noremap <silent><LEADER>8 :LualineBuffersJump 8<CR>
-noremap <silent><LEADER>9 :LualineBuffersJump 9<CR>
-
 " ===== gitgutter =====
 
 let g:gitgutter_map_keys = 0
@@ -124,3 +112,10 @@ noremap <LEADER>gp <Plug>(GitGutterPreviewHunk)
 noremap <LEADER>gs <Plug>(GitGutterStageHunk)
 noremap g[ <Plug>(GitGutterPrevHunk)
 noremap g] <Plug>(GitGutterNextHunk)
+
+" ===== floatterm =====
+
+let g:floaterm_height = 0.8
+let g:floaterm_width = 0.8
+let g:floaterm_keymap_toggle = '<F1>'
+noremap tg :FloatermNew --autoclose=0 gcc % -o %< && ./%<

@@ -1,4 +1,6 @@
 {
+    "suggest.floatConfig": { "border": true , "rounded": true },
+    "diagnostic.floatConfig": { "border": true, "rounded": true },
 	"coc.preferences.extensionUpdateCheck": "daily",
 	"suggest.completionItemKindLabels": {
 		"class": "\uf0e8",

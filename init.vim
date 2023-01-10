@@ -72,10 +72,8 @@ noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
 " Tab management
-" tt => 跳转下一个窗口, tT => 跳转前一个窗口, tn => 创建新窗口,
+" tn => 创建新窗口,
 " tmj => 将当前窗口向前移动, tml=> 将当前窗口向后移动
-noremap tt gt
-noremap tT gT
 noremap tn :tabnew<CR>
 noremap tmj :-tabmove<CR>
 noremap tml :+tabmove<CR>
