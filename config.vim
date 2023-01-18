@@ -110,6 +110,7 @@ lua require('leap').add_default_mappings()
 let g:gitgutter_map_keys = 0
 noremap <LEADER>gp <Plug>(GitGutterPreviewHunk)
 noremap <LEADER>gs <Plug>(GitGutterStageHunk)
+noremap <LEADER>gu <Plug>(GitGutterUndoHunk)
 noremap g[ <Plug>(GitGutterPrevHunk)
 noremap g] <Plug>(GitGutterNextHunk)
 
