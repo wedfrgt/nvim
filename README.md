@@ -43,6 +43,15 @@
 
 ## 安装之后你需要做的
 
+- ps.此配置文件默认你使用了`nerd font`，因此假如使用nvim-qt，则有可能会出现字符显示错误的情况(lualine处)，
+- 因为nvim-qt默认字体不是`nerd font`，需要手动设置，这时在配置文件中加这一段，即可(your font处填写字体，允许空格)
+
+```
+if exists(':GuiFont')
+    GuiFont! [your font]:h12
+endif
+```
+
 ### 首先
 
 - 执行`:PlugInstall`，安装插件
