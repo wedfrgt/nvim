@@ -48,7 +48,7 @@ require('lualine').setup {
 			},
 		},
         lualine_c = { "diagnostics" },
-        lualine_x = {"os.date('%p%H:%M')"},
+        lualine_x = {"os.date('%H:%M')"},
         lualine_y = { { "filename", path = 3,separator = { left = "", right = "" } } },
 	},
 }
