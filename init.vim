@@ -34,6 +34,21 @@ noremap <LEADER><CR> :nohlsearch<CR>
 " 仅在wsl需要此设置，因为默认wsl的<C-v>是粘贴windows系统的剪切板上的内容
 noremap <C-v> <C-q> 
 
+" 配置 wsl 剪切板，非 wsl 环境删除即可
+
+let g:clipboard = {
+            \   'name': 'WslClipboard',
+            \   'copy': {
+            \      '+': 'clip.exe',
+            \      '*': 'clip.exe',
+            \    },
+            \   'paste': {
+            \      '+': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+            \      '*': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+            \   },
+            \   'cache_enabled': 0,
+            \ }
+
 " bn => 下一个buffer    bp => 前一个buffer
 " bq => 退出当前buffer
 noremap bn :bn<CR>
