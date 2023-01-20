@@ -51,7 +51,7 @@
 	"explorer.keyMappingMode": "none",
 	"explorer.buffer.showHiddenBuffers": false,
 	"explorer.keyMappings.global": {
-        "g": "toggleSelection",
+        "G": "toggleSelection",
         "<tab>": "actionMenu",
         "o": [
             "wait",
@@ -69,10 +69,12 @@
         "v": "open:vsplit",
         "tt": "open:previousBuffer",
         "<bs>": "gotoParent",
-        "y": "copyFile",
+        "yy": "copyFile:toggle",
         "yp": "copyFilepath",
         "yn": "copyFilename",
+        "pp": "PasteFile",
         "a": "addFile",
+        "A": "addDirectory",
         "r": "rename",
         "?": "help",
         "q": "quit",
