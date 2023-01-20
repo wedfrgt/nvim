@@ -89,6 +89,9 @@ map Q :q<CR>
 " R 刷新vimrc
 map R :source $MYVIMRC<CR>
 
+" Y 保存在系统剪切板
+noremap Y "+y
+
 " colorscheme dracula		" dracula主题
 " colorscheme cosme
 colorscheme onedark
