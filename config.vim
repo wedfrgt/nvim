@@ -118,5 +118,10 @@ noremap g] <Plug>(GitGutterNextHunk)
 
 let g:floaterm_height = 0.8
 let g:floaterm_width = 0.8
-let g:floaterm_keymap_toggle = '<F1>'
+let g:floaterm_keymap_toggle = '<C-t>'
 noremap tg :FloatermNew --autoclose=0 gcc % -o %< && ./%<
+
+" ===== indentLine =====
+
+let g:vim_json_conceal = 0
+let g:markdown_syntax_conceal = 0
