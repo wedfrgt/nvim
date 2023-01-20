@@ -31,7 +31,7 @@ noremap - Nzz
 " 空格 + 回车 => 关闭 '/' 搜索的高亮
 noremap <LEADER><CR> :nohlsearch<CR>	
 
-" 仅在wsl需要此设置，因为默认wsl的<C-v>是粘贴windows系统的剪切板上的内容
+" 仅在windows terminal需要此设置，因为默认windows terminal的<C-v>是粘贴windows系统的剪切板上的内容
 noremap <C-v> <C-q> 
 
 " 配置 wsl 剪切板，非 wsl 环境删除即可
@@ -106,6 +106,8 @@ map R :source $MYVIMRC<CR>
 
 " Y 保存在系统剪切板
 noremap Y "+y
+" P 粘贴系统剪切版的内容
+noremap P "+p
 
 " colorscheme dracula		" dracula主题
 " colorscheme cosme
