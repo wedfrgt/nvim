@@ -125,3 +125,7 @@ noremap tg :FloatermNew --autoclose=0 gcc % -o %< && ./%<
 
 let g:vim_json_conceal = 0
 let g:markdown_syntax_conceal = 0
+
+" ===== rainbow =====
+
+let g:rainbow_active = 1

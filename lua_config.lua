@@ -62,3 +62,11 @@ vim.api.nvim_set_keymap("n", "<leader>6", ":LualineBuffersJump 6<CR>", {noremap 
 vim.api.nvim_set_keymap("n", "<leader>7", ":LualineBuffersJump 7<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>8", ":LualineBuffersJump 8<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>9", ":LualineBuffersJump 9<CR>", {noremap = true, silent = true})
+
+-- nvim-treesitter
+require'nvim-treesitter.configs'.setup {
+    ensure_installed = { "c", "cpp", "lua", "vim", "bash", "cmake", "help", "python", "make", "markdown", "json" },
+
+    highlight = { enable = true },
+    indent = { enable = true },
+}

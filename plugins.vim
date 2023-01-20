@@ -18,5 +18,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'nvim-lualine/lualine.nvim'
   Plug 'Yggdroot/indentLine'
   Plug 'voldikss/vim-floaterm'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'luochen1990/rainbow'
 
 call plug#end()
