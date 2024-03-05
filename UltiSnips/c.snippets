@@ -140,11 +140,11 @@ endsnippet
 
 ## Dynamic Allocation
 snippet mlc "p = (xxx *) malloc(xxx);"
-${1:ptr} = (${2:type} *) malloc(${3:sizeof($4)});
+${1:ptr} = (${2:type}*) malloc(${3:sizeof($4)});
 endsnippet
 
 snippet clc "p = (xxx *) calloc(xxx, xxx);"
-${1:ptr} = (${2:type} *) calloc(${3:size}, sizeof($4));
+${1:ptr} = (${2:type}*) calloc(${3:size}, sizeof($4));
 endsnippet
 
 snippet fre "free(xxx);"

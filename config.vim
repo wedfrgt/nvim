@@ -1,6 +1,8 @@
 " ===== coc.nvim =====
 let g:coc_global_extensions = [
   \ 'coc-json', 
+  \ 'coc-clangd', 
+  \ 'coc-diagnostic', 
   \ 'coc-pyright',
   \ 'coc-highlight',
   \ 'coc-explorer',
@@ -58,8 +60,8 @@ noremap <LEADER>r :MarkdownPreview<CR>
 
 " imap <M-k> <Plug>(coc-snippets-expand)
 " vmap <M-l> <Plug>(coc-snippets-select)
-let g:coc_snippet_next = '<m-l>'
-let g:coc_snippet_prev = '<m-j>'
+let g:coc_snippet_next = '<C-l>'
+let g:coc_snippet_prev = '<C-j>'
 " imap <M-l> <Plug>(coc-snippets-expand-jump)
 
 " ===== vim-bookmarks =====

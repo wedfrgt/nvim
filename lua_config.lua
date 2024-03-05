@@ -65,8 +65,18 @@ vim.api.nvim_set_keymap("n", "<leader>9", ":LualineBuffersJump 9<CR>", {noremap 
 
 -- nvim-treesitter
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = { "c", "cpp", "lua", "vim", "bash", "cmake", "help", "python", "make", "json" },
+    ensure_installed = { "c", "cpp", "lua", "vim", "bash", "cmake", "python", "make", "json" },
+
+    incremental_selection = {
+        enable = true,
+        keymaps = {
+            init_selection = '<CR>',
+            node_incremental = '<CR>',
+            node_decremental = '<BS>',
+        }
+    },
 
     highlight = { enable = true },
-    indent = { enable = true },
 }
+
+vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
